@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Amazon.css">
+    <script src="Amazon.js"></script>
+</head>
+<body>  
+    
+
+    <!-- Navbar -->
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                <h2>amazon</h2>
+            </div>
+
+            <div class="location">
+                <span>Deliver to</span>
+                <strong>India</strong>
+            </div>
+
+            <div class="search-box">
+
+                <select>
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                    <option>Books</option>
+                </select>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search Amazon"
+                >
+
+                <button onclick="searchProduct()">🔍</button>
+
+            </div>
+
+            <div class="language">
+                EN
+            </div>
+
+            <div class="account">
+                <span>Hello, sign in</span>
+                <strong>Account & Lists</strong>
+            </div>
+
+            <div class="orders">
+                <span>Returns</span>
+                <strong>& Orders</strong>
+            </div>
+
+            <div class="cart">
+                🛒 Cart
+                <span id="cartCount">0</span>
+            </div>
+
+        </div>
+
+        <!-- Menu -->
+        <nav class="menu">
+
+            <a href="#">☰ All</a>
+            <a href="#">Today's Deals</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Registry</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Sell</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Welcome to Amazon Clone</h1>
+
+            <p>
+                Find the best products at the best prices.
+            </p>
+
+            <button onclick="scrollToProducts()">
+                Shop Now
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+
+    <section class="categories">
+
+        <h2>Shop by Category</h2>
+
+        <div class="category-container">
+
+            <div class="category">
+                <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=600&q=80" alt="Electronics">
+                <h3>Electronics</h3>
+            </div>
+
+            <div class="category">
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=600&q=80" alt="Fashion">
+                <h3>Fashion</h3>
+            </div>
+
+            <div class="category">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="Home">
+                <h3>Home</h3>
+            </div>
+
+            <div class="category">
+                <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=600&q=80" alt="Books">
+                <h3>Books</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Products -->
+
+    <section class="products" id="products">
+
+        <h2>Popular Products</h2>
+
+        <div class="product-container">
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="Headphones">
+
+                <h3>Wireless Headphones</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆
+                </div>
+
+                <p class="price">₹1,999</p>
+
+                <button onclick="addToCart('Wireless Headphones',1999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80" alt="Smart Watch">
+
+                <h3>Smart Watch</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p class="price">₹2,499</p>
+
+                <button onclick="addToCart('Smart Watch',2499)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" alt="Running Shoes">
+
+                <h3>Running Shoes</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆
+                </div>
+
+                <p class="price">₹1,799</p>
+
+                <button onclick="addToCart('Running Shoes',1799)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=500&q=80" alt="Book">
+
+                <h3>Programming Book</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p class="price">₹699</p>
+
+                <button onclick="addToCart('Programming Book',699)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-top">
+            <h2>Amazon Clone</h2>
+            <p>Back to top</p>
+        </div>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>Get to Know Us</h3>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Press Releases</p>
+            </div>
+
+            <div>
+                <h3>Connect with Us</h3>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>Twitter</p>
+            </div>
+
+            <div>
+                <h3>Make Money with Us</h3>
+                <p>Sell on Amazon</p>
+                <p>Advertise Products</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Amazon Clone
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+    
+
+</body>
+</html>
